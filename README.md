@@ -1,5 +1,3 @@
-Commandra(attached_assets/file_0000000002b4720abb0faad7bf3b9e96_1783780510071.png)
-
 # COMMANDRA
 
 > Local-first AI coding assistant. No cloud. No API keys. Just your machine, your code, and your models.
