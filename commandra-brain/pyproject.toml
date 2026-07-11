@@ -1,0 +1,44 @@
+[project]
+name = "commandra-nox-brain"
+version = "0.3.0"
+description = "Commandra Nox Brain — fully local AI software-engineering engine with MCP, LSP, RAG, Sandbox, Self-Reflection, Benchmarks, Planning Timeline, Knowledge Base, Live UI Preview, tree-sitter AST, ripgrep/fd search, Chroma/Qdrant/LanceDB vector DBs, Semgrep, OSV, Gitleaks, GitPython, Docker, and more."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.139.0",
+    "httpx>=0.28.1",
+    "pydantic>=2.13.4",
+    "python-multipart>=0.0.32",
+    "uvicorn[standard]>=0.51.0",
+]
+
+[project.optional-dependencies]
+# Install a group to enable that capability
+ast = ["tree-sitter>=0.23.0", "tree-sitter-python", "tree-sitter-javascript",
+       "tree-sitter-typescript", "tree-sitter-rust", "tree-sitter-go"]
+git = ["gitpython>=3.1.43"]
+chroma = ["chromadb>=0.5.0"]
+qdrant = ["qdrant-client>=1.11.0"]
+lancedb = ["lancedb>=0.13.0", "pyarrow>=17.0.0"]
+docs = ["markitdown>=0.0.1a3"]
+firecrawl = ["firecrawl-py>=0.0.16"]
+docker = ["docker>=7.1.0"]
+embeddings = ["sentence-transformers>=3.0.0"]
+semgrep = ["semgrep>=1.90.0"]
+all = [
+    "tree-sitter>=0.23.0", "tree-sitter-python", "tree-sitter-javascript",
+    "tree-sitter-typescript", "tree-sitter-rust", "tree-sitter-go",
+    "gitpython>=3.1.43",
+    "chromadb>=0.5.0",
+    "qdrant-client>=1.11.0",
+    "lancedb>=0.13.0", "pyarrow>=17.0.0",
+    "markitdown>=0.0.1a3",
+    "firecrawl-py>=0.0.16",
+    "docker>=7.1.0",
+    "sentence-transformers>=3.0.0",
+    "semgrep>=1.90.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
